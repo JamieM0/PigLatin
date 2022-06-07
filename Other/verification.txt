@@ -1,0 +1,5 @@
+I authenticate and verify that the following commits are me:
+* 024e34c63a73d173abe50d008519283420cd74df
+* 50a7ef658359cc8dd7786703253e2a2bf65f02c7
+* ce1c71e5f9afedef436ca53aa1948012c4eb1296
+* aae607abc1ecfe26196ca7a4af3400b845654642
