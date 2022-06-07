@@ -15,6 +15,7 @@ namespace PigLatinForms
         public frmMain()
         {
             InitializeComponent();
+            pnlConvertedSide.Visible = false;
         }
 
         private void btnCopy_Click(object sender, EventArgs e)
@@ -24,11 +25,27 @@ namespace PigLatinForms
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
+            //Animate to the left
+            int currentX = pnlClearSide.Location.X;
+            int currentY = pnlClearSide.Location.Y;
+            int animationSpeed = 220;
+            Point currentP = new Point(currentX, currentY);
+            if (currentP != new Point(176, 103))
+            {
+                for (int i = 0; i < animationSpeed; i++)
+                {
+                    pnlClearSide.Location = new Point(pnlClearSide.Location.X - 1, currentY);
+                }
+            }
+
+            txtConverted.Text = "";
             string[] words = txtCleartext.Text.Split(' ');
             foreach(string element in words)
             {
-                convertToPigLatin(txtCleartext.Text);
+                convertToPigLatin(element);
             }
+
+            pnlConvertedSide.Visible = true;
         }
         
         private void convertToPigLatin(string text)
@@ -45,6 +62,46 @@ namespace PigLatinForms
             else
             {
                 txtConverted.Text += text.Substring(1) + text[0] + "ay" + " ";
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTestAnimate_Click(object sender, EventArgs e)
+        {
+            int currentX = pnlClearSide.Location.X;
+            int currentY = pnlClearSide.Location.Y;
+            int animationSpeed = 1000;
+            Point currentP = new Point(currentX, currentY);
+            if (currentP != new Point(176, 103))
+            {
+                for (int i = 0; i < animationSpeed; i++)
+                {
+                    pnlClearSide.Location = new Point(pnlClearSide.Location.X + 1, currentY);
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtCleartext.Text = "";
+            txtConverted.Text = "";
+            pnlConvertedSide.Visible = false;
+
+            //Animate to the right
+            int currentX = pnlClearSide.Location.X;
+            int currentY = pnlClearSide.Location.Y;
+            int animationSpeed = 220;
+            Point currentP = new Point(currentX, currentY);
+            if (currentP != new Point(176, 103))
+            {
+                for (int i = 0; i < animationSpeed; i++)
+                {
+                    pnlClearSide.Location = new Point(pnlClearSide.Location.X + 1, currentY);
+                }
             }
         }
     }
