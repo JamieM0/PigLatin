@@ -16,6 +16,7 @@ namespace PigLatinForms
         {
             InitializeComponent();
             pnlConvertedSide.Visible = false;
+            btnConvert.Enabled = false;
         }
 
         private void btnCopy_Click(object sender, EventArgs e)
@@ -102,6 +103,18 @@ namespace PigLatinForms
                 {
                     pnlClearSide.Location = new Point(pnlClearSide.Location.X + 1, currentY);
                 }
+            }
+        }
+
+        private void txtCleartext_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCleartext.Text.Length < 3)
+            {
+                btnConvert.Enabled = false;
+            }
+            else
+            {
+                btnConvert.Enabled = true;
             }
         }
     }

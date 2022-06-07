@@ -35,9 +35,9 @@
             this.txtConverted = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlConvertedSide = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.pnlClearSide = new System.Windows.Forms.Panel();
             this.btnTestAnimate = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.pnlConvertedSide.SuspendLayout();
             this.pnlClearSide.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,7 @@
             this.txtCleartext.Name = "txtCleartext";
             this.txtCleartext.Size = new System.Drawing.Size(347, 35);
             this.txtCleartext.TabIndex = 1;
+            this.txtCleartext.TextChanged += new System.EventHandler(this.txtCleartext_TextChanged);
             // 
             // btnConvert
             // 
@@ -112,6 +113,17 @@
             this.pnlConvertedSide.Size = new System.Drawing.Size(359, 245);
             this.pnlConvertedSide.TabIndex = 6;
             // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(166, 184);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(92, 47);
+            this.btnReset.TabIndex = 6;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // pnlClearSide
             // 
             this.pnlClearSide.Controls.Add(this.lbInstructions1);
@@ -132,17 +144,6 @@
             this.btnTestAnimate.UseVisualStyleBackColor = true;
             this.btnTestAnimate.Visible = false;
             this.btnTestAnimate.Click += new System.EventHandler(this.btnTestAnimate_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(166, 184);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(92, 47);
-            this.btnReset.TabIndex = 6;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmMain
             // 
