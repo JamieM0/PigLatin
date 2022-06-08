@@ -31,7 +31,7 @@ namespace PigLatinForms
             int currentY = pnlClearSide.Location.Y;
             int animationSpeed = 220;
             Point currentP = new Point(currentX, currentY);
-            if (currentP != new Point(176, 103))
+            if (currentP != new Point(63, 106))
             {
                 for (int i = 0; i < animationSpeed; i++)
                 {
