@@ -28,5 +28,17 @@ namespace PigLatinForms
             Hide();
             new RPS().Show();
         }
+
+        private void btnSimpleCalculator_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new SimpleCalculator().Show();
+        }
+
+        private void btnCodeBreaker_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CodeBreaker().Show();
+        }
     }
 }
